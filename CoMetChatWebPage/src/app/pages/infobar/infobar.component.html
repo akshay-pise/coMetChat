@@ -1,0 +1,42 @@
+<div class="pt-2">
+  <div class="d-flex mx-3 justify-content-between infoTitle">
+    <p>Task</p>
+    <div class="d-flex  align-items-center">
+      <button type="button" class="btn mx-2 px-2">{{itemcoutn+1}} Task</button>
+      <span (click)="changeicon()" class="">
+        <i *ngIf="droplist" class="fa fa-2x fa-angle-up" aria-hidden="true"></i>
+        <i *ngIf="!droplist" class="fa fa-2x fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="vertical-menu rounded" *ngIf="droplist">
+    <a href="#" *ngFor="let item of userChatList"><i class="fa pe-5 fa-tasks"></i> <span>{{item.location.state}}</span>
+      <div class="float-end"><span class="badge badge-secondary mx-3 px-2 bg-primary">imp</span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></div></a>
+    <!-- <a href="#"><i class="fa pe-5 fa-tasks"></i> <span>marketing team </span> <i class="fa fa-ellipsis-h float-end"
+        aria-hidden="true"></i></a> -->
+    <div>
+      <a href="#" class="viewall"><i class="fa fa-plus pe-2 "></i> <span>view all </span> </a>
+    </div>
+
+  </div>
+  <hr>
+  <div class="d-flex mx-3 justify-content-between infoTitle">
+    <p>Alert</p>
+    <span (click)="changeicon1()" class="pt-3">
+      <i *ngIf="droplist1" class="fa fa-2x fa-angle-up" aria-hidden="true"></i>
+      <i *ngIf="!droplist1" class="fa fa-2x fa-angle-down" aria-hidden="true"></i>
+    </span>
+  </div>
+  <div class="vertical-menu" *ngIf="droplist1">
+    <a href="#" *ngFor="let item of userChatList"><i class="fa pe-5 fa-exclamation-circle"></i>
+      <span>{{item.login.password}}</span> <i class="fa fa-ellipsis-h p-2 float-end" aria-hidden="true"></i></a>
+    <!-- <a href="#"><i class="fa pe-5 fa-exclamation-circle"></i> <span>marketing team </span> <i
+        class="fa fa-ellipsis-h float-end" aria-hidden="true"></i></a> -->
+    <div>
+      <a href="#" class="viewall"><i class="fa fa-plus pe-2 "></i> <span>view all </span> </a>
+    </div>
+  </div>
+
+  <hr>
+
+</div>
