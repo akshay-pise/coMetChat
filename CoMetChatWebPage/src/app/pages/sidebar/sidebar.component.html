@@ -1,8 +1,9 @@
 <div class="justify-content-between">
+  <!-- header and body section -->
   <div>
     <div class="nav-brand">
       <a href="#">
-        <img src="/assets/images/logo.png" width="100" height="60" class="d-inline-block align-top" alt="logo">
+        <img src="https://cdn.logo.com/hotlink-ok/logo-social.png" width="100" height="60" class="d-inline-block align-top" alt="">
         Briidea
       </a>
     </div>
@@ -13,7 +14,6 @@
     <h3>Direct meassage</h3>
     <div class="vertical-menu shadow-sm p-3 mb-5 bg-body rounded">
       <main class="leaderboard__profiles">
-
         <article class="leaderboard__profile d-flex justify-content-between px-2" *ngFor="let item of userChatList">
           <img src="{{item.picture.large}}" class="rounded-circle shadow-sm p-1 bg-white rounded">
           <div class="leaderboard__name align-items-center">
@@ -22,26 +22,15 @@
           </div>
           <div class="leaderboard__value d-flex align-items-center">{{item.location.street.number}}</div>
         </article>
-
-        <!-- <article class="leaderboard__profile d-flex justify-content-between px-2">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8pa9GYZH_-HFPa1cmz0jHxuOEmHDORnrZiYTqeg_PZw&s"
-            class="rounded-circle shadow-sm p-1 bg-white rounded">
-          <div class="leaderboard__name d-flex align-items-center">Elizabeth Holmes</div>
-          <div class="leaderboard__value d-flex align-items-center">4 may</div>
-        </article>
-      -->
       </main>
     </div>
+
     <h3>Product Team</h3>
     <div class="vertical-menu shadow-sm p-3 mb-5 bg-body rounded">
-
       <a href="#" *ngFor="let item of userChatList"> # {{item.location.street.name}}</a>
-
-      <!-- <a href="#">web team 1</a>
-      <a href="#">marketing team</a> -->
     </div>
   </div>
+  <!-- endmenu -->
   <div class="endmenu">
     <div class="d-flex ">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8pa9GYZH_-HFPa1cmz0jHxuOEmHDORnrZiYTqeg_PZw&s"
