@@ -23,12 +23,16 @@
     </div>
   </div>
   <!-- CHAT footer -->
+  <form #form="ngForm">
   <div class="chat_input ">
-    <input type="text" placeholder="Type a message"[(ngModel)]="mychatObj.msg">
+    <input type="text" placeholder="Type a message"[(ngModel)]="mychatObj.msg" #chatbar="ngModel" name="chatbar" required>
     <div class="input-group-prepend">
-      <span class="iconSize" (click)="OnSubmit()">
-        <i class="fa fa-1x fa-send" ></i></span>
+      <button [disabled]="form.invalid" class="iconSize rounded border-0" (click)="OnSubmit()" >
+        <i class="fa fa-1x fa-send" ></i>
+      </button>
   </div>
+
   </div>
+</form>
 </div>
 
