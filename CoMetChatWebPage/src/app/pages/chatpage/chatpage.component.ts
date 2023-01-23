@@ -8,7 +8,35 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ChatpageComponent implements OnInit {
 
   @Input() userChatList: any[] = [];
-  constructor() { }
+  // chatarray:any[]=["hello"];
+  frchatarray:any;
+  mychatarray:any[]=[];
+  mychatObj:any={
+    msg: '',
+    doj: new Date()
+  }
+
+  constructor() {
+    this.frchatarray=[{
+      msg: 'Hello.. !',
+      doj: new Date()
+    },
+    {
+      msg: 'How are you',
+      doj: new Date()
+    }
+  ]
+  }
   ngOnInit(): void {
+  }
+  OnSubmit(){
+    debugger;
+    this.mychatarray.push(this.mychatObj);
+    console.log(this.mychatarray);
+
+    this.mychatObj={
+      msg: '',
+      doj: new Date()
+    }
   }
 }

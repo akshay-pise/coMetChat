@@ -5,7 +5,7 @@
         <img
         src="{{item.picture.large}}"
         class="rounded-circle userimg shadow-sm bg-secondary rounded">
-      <h4>{{item.name.first}} {{item.name.last}} <br><span>online</span></h4>
+      <h4>{{item.name.first}} {{item.name.last}} <br><span class="text-success">online</span></h4>
     </div>
     <div class="d-flex iconSize">
       <i class="fa mx-2 p-2 fa-2x fa-video-camera" aria-hidden="true"></i>
@@ -15,18 +15,19 @@
   </div>
   <!-- CHAT-BOX -->
   <div class="chatbox">
-    <div class="message friend_msg">
+    <div class="message friend_msg"  *ngFor="let chat of frchatarray; let isLast=last">
+      <p>{{chat.msg}}<br><span>{{ chat.doj | date:'mediumTime' }}</span></p>
     </div>
-    <div class="message my_msg">
-      <p>{{item.location.timezone.description}}<br><span>12:15</span></p>
+    <div class="message my_msg" *ngFor="let chat of mychatarray; let isLast=last">
+      <p>{{chat.msg}}<br><span>{{ chat.doj | date:'mediumTime' }}</span></p>
     </div>
   </div>
   <!-- CHAT footer -->
   <div class="chat_input ">
-    <input type="text" placeholder="Type a message">
+    <input type="text" placeholder="Type a message"[(ngModel)]="mychatObj.msg">
     <div class="input-group-prepend">
-      <span class="iconSize">
-        <i class="fa fa-1x fa-send"></i></span>
+      <span class="iconSize" (click)="OnSubmit()">
+        <i class="fa fa-1x fa-send" ></i></span>
   </div>
   </div>
 </div>

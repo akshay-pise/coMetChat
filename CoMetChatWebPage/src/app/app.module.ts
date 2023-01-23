@@ -7,18 +7,20 @@ import { InfobarComponent } from './pages/infobar/infobar.component';
 import { ChatpageComponent } from './pages/chatpage/chatpage.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorInterceptor } from './core/interceptor/-interceptor.interceptor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     InfobarComponent,
-    ChatpageComponent
+    ChatpageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
