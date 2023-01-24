@@ -9,5 +9,5 @@ export class SidebarComponent implements OnInit {
 
   @Input() userChatList: any[] = [];
   constructor() { }
-  ngOnInit(): void {  }
+  ngOnInit(): void { }
 }

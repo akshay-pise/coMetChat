@@ -2,7 +2,6 @@
   <!-- first notification block -->
   <div class=" mx-3">
     <div class="d-flex justify-content-between infoTitle">
-
       <p>Task</p>
       <div class="d-flex  align-items-center">
         <button type="button" class="btn mx-2 px-2">{{itemcoutn+1}} Task</button>
@@ -13,9 +12,9 @@
       </div>
     </div>
     <div class="vertical-menu rounded" *ngIf="droplist">
-      <a href="#" *ngFor="let item of userChatList"><i class="fa pe-5 fa-tasks"></i>
+      <a href="#" *ngFor="let item of userChatList"><i class="fa pe-2 fa-tasks"></i>
         <span>{{item.location.state}}</span>
-        <div class="float-end"><span class="badge badge-secondary mx-3 px-2 bg-primary">imp</span><i
+        <div class="float-end"><span class="badge badge-secondary me-2 px-2 bg-primary">imp</span><i
             class="fa fa-ellipsis-h" aria-hidden="true"></i>
         </div>
       </a>
@@ -35,12 +34,12 @@
       </span>
     </div>
     <div class="vertical-menu" *ngIf="droplist1">
-      <a href="#" *ngFor="let item of userChatList"><i class="fa pe-5 fa-exclamation-circle"></i>
+      <a href="#" *ngFor="let item of userChatList"><i class="fa pe-2 fa-exclamation-circle"></i>
         <span>{{item.login.password}}</span>
         <i class="fa fa-ellipsis-h p-2 float-end" aria-hidden="true"></i>
       </a>
       <div>
-        <a href="#" class="viewall"><i class="fa fa-plus pe-2 "></i> <span>view all </span> </a>
+        <a href="#" class="viewall"><i class="fa fa-plus pe-2"></i> <span>view all </span> </a>
       </div>
     </div>
     <hr>

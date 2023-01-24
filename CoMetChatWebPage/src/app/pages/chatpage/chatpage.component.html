@@ -2,9 +2,7 @@
   <!-- chatpage Header -->
   <div class="header">
     <div class="imgText">
-        <img
-        src="{{item.picture.large}}"
-        class="rounded-circle userimg shadow-sm bg-secondary rounded">
+      <img src="{{item.picture.large}}" class="rounded-circle userimg shadow-sm bg-secondary rounded">
       <h4>{{item.name.first}} {{item.name.last}} <br><span class="text-success">online</span></h4>
     </div>
     <div class="d-flex iconSize">
@@ -15,7 +13,7 @@
   </div>
   <!-- CHAT-BOX -->
   <div class="chatbox">
-    <div class="message friend_msg"  *ngFor="let chat of frchatarray; let isLast=last">
+    <div class="message friend_msg" *ngFor="let chat of frchatarray; let isLast=last">
       <p>{{chat.msg}}<br><span>{{ chat.doj | date:'mediumTime' }}</span></p>
     </div>
     <div class="message my_msg" *ngFor="let chat of mychatarray; let isLast=last">
@@ -24,15 +22,14 @@
   </div>
   <!-- CHAT footer -->
   <form #form="ngForm">
-  <div class="chat_input ">
-    <input type="text" placeholder="Type a message"[(ngModel)]="mychatObj.msg" #chatbar="ngModel" name="chatbar" required>
-    <div class="input-group-prepend">
-      <button [disabled]="form.invalid" class="iconSize rounded border-0" (click)="OnSubmit()" >
-        <i class="fa fa-1x fa-send" ></i>
-      </button>
-  </div>
-
-  </div>
-</form>
+    <div class="chat_input ">
+      <input type="text" placeholder="Type a message" [(ngModel)]="mychatObj.msg" #chatbar="ngModel" name="chatbar"
+        required>
+      <div class="input-group-prepend">
+        <button [disabled]="form.invalid" class="iconSize rounded border-0" (click)="OnSubmit()">
+          <i class="fa fa-1x fa-send"></i>
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
-
